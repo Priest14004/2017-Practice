@@ -1,5 +1,7 @@
 package frc.team236.testbed;
 
+import edu.wpi.first.wpilibj.command.Scheduler;
+import frc.team236.testbed.subsystems.Turret;
 import frc.team236.ticktank.ControllerType;
 import frc.team236.ticktank.Settings;
 import frc.team236.ticktank.TickTank;
@@ -14,6 +16,7 @@ public class RobotModule extends IterativeModule {
     
     // Subsystems
     public static TickTank tank;
+    public static Turret turret;
 
     @Override
     public String getModuleName() {
@@ -22,7 +25,7 @@ public class RobotModule extends IterativeModule {
 
     @Override
     public String getModuleVersion() {
-        return "1.0.0";
+        return "1.1.0";
     }
 
     @Override
@@ -33,7 +36,7 @@ public class RobotModule extends IterativeModule {
         // Define drive settings
         Settings config = new Settings();
         config.controllerType = ControllerType.VICTOR;
-        config.hasGyro = true;
+        config.hasGyro = false;
         config.hasEncoders = false;
         config.motorCount = 2;
         config.leftStick = oi.leftStick;
@@ -41,5 +44,6 @@ public class RobotModule extends IterativeModule {
         
         // Create drive
         tank = new TickTank(config);
+        turret = new Turret();
     }
 }
