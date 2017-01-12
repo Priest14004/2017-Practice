@@ -8,7 +8,7 @@ public class ManualTurret extends Command {
 
 	@Override
 	protected void initialize() {
-		requires(frc.team236.testbed.RobotModule.turret);
+		requires(RobotModule.turret);
 		RobotModule.turret.stop();
 	}
 
