@@ -30,7 +30,7 @@ public class RobotModule extends IterativeModule {
 
     @Override
     public void robotInit() {
-    	oi = new OI();
+        oi = new OI();
         logger = new Logger("Testbed", Logger.ATTR_DEFAULT);
         
         // Define drive settings
