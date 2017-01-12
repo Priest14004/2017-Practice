@@ -38,6 +38,7 @@ public class RobotModule extends IterativeModule {
         config.controllerType = ControllerType.VICTOR;
         config.hasGyro = false;
         config.hasEncoders = false;
+        config.hasGears = false;
         config.motorCount = 2;
         config.leftStick = oi.leftStick;
         config.rightStick = oi.rightStick;
