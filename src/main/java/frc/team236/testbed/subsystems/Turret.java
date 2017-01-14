@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team236.testbed.RobotMap;
-import frc.team236.testbed.commands.ManualTurret;
+import frc.team236.testbed.commands.TurretWithJoystick;
 import jaci.openrio.toast.lib.registry.Registrar;
 //
 //
@@ -50,6 +50,6 @@ public class Turret extends Subsystem {
 	// 
 	@Override
 	protected void initDefaultCommand() {
-		setDefaultCommand(new ManualTurret());
+		setDefaultCommand(new TurretWithJoystick());
 	}
 }

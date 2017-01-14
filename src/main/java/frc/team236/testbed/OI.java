@@ -2,7 +2,7 @@ package frc.team236.testbed;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.team236.testbed.commands.ManualTurret;
+import frc.team236.testbed.commands.TurretWithJoystick;
 
 public class OI {
 	public Joystick leftStick;
@@ -17,6 +17,6 @@ public class OI {
 		controller = new Joystick(ControlMap.CONTROLLER_PORT);
 		
 		manualTurret = new JoystickButton(controller, ControlMap.Controller.MANUAL_TURRET);
-		manualTurret.whileHeld(new ManualTurret());
+		manualTurret.whileHeld(new TurretWithJoystick());
 	}
 }

@@ -4,11 +4,14 @@ import edu.wpi.first.wpilibj.command.Command;
 import frc.team236.testbed.RobotModule;
 import frc.team236.testbed.lib.LogitechF310;
 
-public class ManualTurret extends Command {
+public class TurretWithJoystick extends Command {
+
+	public TurretWithJoystick() {
+		requires(RobotModule.turret);
+	}
 
 	@Override
 	protected void initialize() {
-		requires(RobotModule.turret);
 		RobotModule.turret.stop();
 	}
 
